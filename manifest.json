@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Background Scripting",
+  "version": "1.0",
+  "description": "Playing with background scripting",
+  "icons": {
+    "64": "images/interview_64.png",
+    "128": "images/interview_128.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "images/*"],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}
